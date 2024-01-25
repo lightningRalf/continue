@@ -179,7 +179,7 @@ class DefaultModelEditCodeStep(Step):
     _new_contents: str = ""
     _prompt_and_completion: str = ""
 
-    summary_prompt: str = "Please give brief a description of the changes made above using markdown bullet points. Be concise:"
+    summary_prompt: str = "Revise the changes above and summarize them using Markdown bullet points. Keep the explanation brief."
 
     async def describe(self, models: Models) -> Coroutine[str, None, None]:
         if self._previous_contents.strip() == self._new_contents.strip():
